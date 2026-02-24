@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 
 const pingStatusSchema = new mongoose.Schema(
     {
-        
+        piId:
+        {
+            type: Number,
+            required: true,
+        }
     },
     {
         timestamp: true,
