@@ -60,7 +60,7 @@ while True:
         except Exception as e:
             print(f"Error: {e}")
             fail_count += 1
-            if fail_count >= r:
+            if fail_count >= 3:
                 print("Resetting UART module")
                 u = machine.UART(0, baudrate=115200, tx=machine.Pin(0), rx = machine.Pin(1))
                 fail_count = 0
